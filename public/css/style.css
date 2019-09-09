@@ -1,0 +1,85 @@
+
+  #customFooter{
+                background-color: #3d3d5c;
+                text-align: center;
+                color: white;
+                padding:10px;
+                margin:0px;
+        }
+
+.main{
+  background-color: #ebfafa;
+  color: #3d3d5c;
+}
+
+.headings{
+  color:#3d3d5c;
+}
+
+#link{
+  color:firebrick;
+  text-decoration: none;
+}
+
+.img-circle{
+  border-radius: 50%;
+}
+
+#img{
+  border: 1px solid #ddd; /* Gray border */
+  border-radius: 4px;  /* Rounded border */
+  padding: 5px; /* Some padding */
+  width: 400px; /* Set a small width */
+}
+
+
+#img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+.bg
+{
+  width: 100%;
+  z-index: 0;
+}
+
+
+<a target="_blank" href="img_forest.jpg">
+  <img src="img_forest.jpg" alt="Forest">
+</a>
+
+/*This code was taken from https://github.com/tristen/tablesort/edit/gh-pages/tablesort.css */
+
+th[role=columnheader]:not(.no-sort) {
+	cursor: pointer;
+}
+
+th[role=columnheader]:not(.no-sort):after {
+	content: '';
+	float: right;
+	margin-top: 7px;
+	border-width: 0 4px 4px;
+	border-style: solid;
+	border-color: #404040 transparent;
+	visibility: hidden;
+	opacity: 0;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+th[aria-sort=ascending]:not(.no-sort):after {
+	border-bottom: none;
+	border-width: 4px 4px 0;
+}
+
+th[aria-sort]:not(.no-sort):after {
+	visibility: visible;
+	opacity: 0.4;
+}
+
+th[role=columnheader]:not(.no-sort):hover:after {
+	visibility: visible;
+	opacity: 1;
+}
