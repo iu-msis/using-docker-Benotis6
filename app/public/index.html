@@ -19,6 +19,20 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/startjs.js"></script>
+  <script>
+  new tablesort (document.getElementById('taskTable'));
+  </script>
+  <script>
+  var app = new vue({el: '#ProfileApp',
+    data: {{
+      "PatientGuid" : "1234567",
+      "firstName" : "Ben",
+      "lastName" : "Otis",
+      "DOB" : "1996-05-03"
+      "sexAtbirth" : "M"
+    }}})
+  </script>
 <header>
   <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Ben's Books</a>
@@ -34,7 +48,7 @@
         <a class="nav-link" href="Profile.html">Your Profile</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="table.html">Our Library</a>
+        <a class="nav-link" href="books.html">Our Library</a>
       </li>
     </ul>
   </div>
@@ -79,9 +93,5 @@
 <footer ID="customFooter">
           BB | Phone: 800-555-1234 | 444 Four Circles Dr, Bloomington, IN 47404
 </footer>
-<script type='text/javascript' src='js/basicjs.js'></script>
-<script>
-  new Tablesort(document.getElementById('booktable'));
-</script>
 </body>
 </html>
