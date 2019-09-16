@@ -1,7 +1,8 @@
 FROM php:7.3.8-apache
 
-LABEL maintainer="Tom Gregory"
+LABEL maintainer="Ben Otis"
 
-COPY public /srv/app/public
+COPY public /.app /srv/public
+
 
 COPY docker/apache/vhost.conf /etc/apache2/sites-available/000-default.conf
