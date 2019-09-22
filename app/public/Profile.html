@@ -46,6 +46,10 @@
          <li class="list-group-item"><a v-bind:href="'mailto:'+users.results[0].email">{{users.results[0].email}}</a></li>
        </ul>
      </div>
+     <div id="refreshButton">
+       <button v-on:click="fetchUsers" type="submit" class="btn btn-primary">Generate new Profile</button>
+     </div>
+
    </template>
    </div>
      </center>
@@ -61,7 +65,7 @@
               <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
             <script type="text/javascript" src="js/user.app.js"></script>
-            <
+
 
       </body>
 
