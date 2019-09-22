@@ -1,0 +1,72 @@
+<<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/library.css"
+
+  </head>
+  <body class="main">
+<header>
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Ben's Books</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="Profile.html">Your Profile<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="books.html">Our Library</a>
+      </li>
+    </ul>
+  </div>
+  </nav>
+</header>
+<main>
+<h1>Your Profile</h1>
+<hr>
+<br>
+<br>
+<div id="RandomProfileApp">
+  <form @submit.prevent="fetchUsers" id="refreshButton">
+       <template  v-if="users.results"> <!--code from https://forum.vuejs.org/t/cannot-read-property-0-of-undefined/14638/7-->
+     <div class="card" style="width: 18rem;"> <!--Code from Bootstrap-->
+       <center><a href="https://randomuser.me/api" target="_blank"><img v-bind:src="users.results[0].picture.large" width="200" height="150" alt="" style="border:1px solid black;" ></a></center>
+       <div class="card-body">
+         <h5 class="card-title capitalize">{{users.results[0].name.first}} {{users.results[0].name.last}}</h5>
+       </div>
+       <ul class="list-group list-group-flush">
+         <li class="list-group-item">Origin:{{users.results[0].nat}}</li>
+         <li class="list-group-item">DOB:{{users.results[0].dob.date}} ({{users.results[0].dob.age}} years old)</li>
+         <li class="list-group-item"><a v-bind:href="'mailto:'+users.results[0].email">{{users.results[0].email}}</a></li>
+       </ul>
+       <div @submit.prevent="fetchUsers" id="refreshButton">
+       <button type="submit" class="btn btn-primary">Generate New Profile</button>
+     </div>
+   </template>
+ </form>
+   </div>
+     </center>
+<br>
+<footer ID="customFooter">
+          BB | Phone: 800-555-1234 | 444 Four Circles Dr, Bloomington, IN 47404</footer>
+
+          <!-- Optional JavaScript -->
+              <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+              <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+              <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+            <script type="text/javascript" src="js/user.app.js"></script>
+
+
+      </body>
+
+          </html>
