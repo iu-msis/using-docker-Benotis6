@@ -46,9 +46,11 @@
          <li class="list-group-item">DOB:{{users.results[0].dob.date}} ({{users.results[0].dob.age}} years old)</li>
          <li class="list-group-item"><a v-bind:href="'mailto:'+users.results[0].email">{{users.results[0].email}}</a></li>
        </ul>
-       <div @submit.prevent="fetchUsers" id="refreshButton">
-       <button type="submit" class="btn btn-primary">Generate New Profile</button>
      </div>
+     <div id="refreshButton">
+       <button id="refreshButton" type="submit" class="btn btn-primary">Generate new Profile</button>
+     </div>
+
    </template>
  </form>
    </div>
