@@ -3,7 +3,7 @@
   <head>
     <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/library.css"
+        <link rel="stylesheet" href="css/library.css">
 
   </head>
   <body class="main">
@@ -34,7 +34,7 @@
 <br>
 <br>
 <div id="RandomProfileApp">
-  <form @submit.prevent="fetchUsers" id="refreshButton">
+  <form @submit.prevent="fetchUsers">
        <template  v-if="users.results"> <!--code from https://forum.vuejs.org/t/cannot-read-property-0-of-undefined/14638/7-->
      <div class="card" style="width: 18rem;"> <!--Code from Bootstrap-->
        <center><a href="https://randomuser.me/api" target="_blank"><img v-bind:src="users.results[0].picture.large" width="200" height="150" alt="" style="border:1px solid black;" ></a></center>
